@@ -1,10 +1,9 @@
-// ToDoForm.js
 import React, { useState } from 'react';
 
 function Form({ onAdd }) {
     const [newTask, setNewTask] = useState('');
 
-    const handleAddTask = () => {
+    const dsAddTask = () => {
         onAdd(newTask);
         setNewTask('');
     };
@@ -16,7 +15,7 @@ function Form({ onAdd }) {
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
             />
-            <button onClick={handleAddTask}>Добавить задачу</button>
+            <button onClick={dsAddTask}>Добавить задачу</button>
         </div>
     );
 }
